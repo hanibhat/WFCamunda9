@@ -1,0 +1,83 @@
+<form name="initiateContract">
+ 	<div class="form-group">
+        <label for="contractID">Contract ID</label>
+        <input class="form-control"
+               cam-variable-type="String"
+               cam-variable-name="contractID"
+               name="contractID" />
+    </div>
+    <div class="form-group">
+        <label for="organization">Organization</label>
+        <input class="form-control"
+               cam-variable-type="String"
+               cam-variable-name="organization"
+               name="organization"
+               readonly="true" />
+    </div>
+    <div class="form-group">
+        <label for="price">Price €</label>
+        <input class="form-control"
+               cam-variable-type="Double"
+               cam-variable-name="price"
+               name ="price" />
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input class="form-control"
+        	   type="date"
+               cam-variable-type="date"
+               cam-variable-name="date"
+               name ="date" />
+    </div>
+    <div class="form-group">
+        <label for="deadline">Deadline</label>
+        <input class="form-control"
+        	   type="date"
+               cam-variable-type="date"
+               cam-variable-name="deadline"
+               name ="deadline" />
+    </div>
+</form>
+
+
+<!--
+<!DOCTYPE html>
+<html my-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title> Contract Details </title>
+&lt;!&ndash; Scripts &ndash;&gt;
+    &lt;!&ndash; TODO: switch to minified versions on production &ndash;&gt;
+    &lt;!&ndash;<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>&ndash;&gt;
+    <script src="../scripts/angular.js"></script>
+    &lt;!&ndash;<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>&ndash;&gt;
+    <script src="../scripts/jquery.js"></script>
+    &lt;!&ndash;<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>&ndash;&gt;
+    <script src="../scripts/materialize.js"></script>
+    <script src="../scripts/main.js"></script>
+    &lt;!&ndash; Stylesheets &ndash;&gt;
+    &lt;!&ndash;<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">&ndash;&gt;
+    <link rel="stylesheet" href="../stylesheets/materialize.css">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+</head>
+<body ng-controller="myCont">
+    <div class="container white">
+        <form class="container">
+            <div class="input-field">
+                <input id="client_email" type="email" class="validate">
+                <label for="client_email"> Client's Email </label>
+            </div>
+            <div class="input-field">
+                <input id="contract_id" type="text" class="validate">
+                <label for="contract_id"> Contract ID </label>
+            </div>
+            <div class="input-field">
+                <input id="price" type="number" class="validate">
+                <label for="price"> Price € </label>
+            </div>
+            <label for="date"> Projection Completion Date </label>
+            <input id="date" type="date" class="datepicker">
+        </form>
+    </div>
+</body>
+</html>-->

@@ -1,36 +1,33 @@
 /**
  * Created by hbhat on 26-Jun-17.
  */
-var myMod = angular.module('myApp', ['ngMessages'])
+var myMod = angular.module('myApp', [])
     .controller('myCont', function ($scope, $http) {
-        var orderForm = {
+        var requestForm = {
             name: "",
-            org: "",
+            company: "",
             emailAdd: "",
-            designSpec: "",
+            classifiedRequirements: "",
+            address: "",
+            phone: "",
+            hardcopyRequired: false,
             otime: new Date().toString()
         };
-        $scope.orderForm = orderForm;
+        $scope.requestForm = requestForm;
 
         $scope.submit = function (valid) {
             if (valid) {
                 // console.log($scope.form);
-                $http.post('/order', $scope.orderForm)
+                $http.post('/submit', $scope.requestForm)
                     .then(function (data, status, headers, config) {
-                        if (data.data == 'invalidEmail') {
-                            var $toastContent = $('<span style="color: red">The email address you provided could not be validated</span>');
-                            Materialize.toast($toastContent, 5000);
-                        } else {
-                            var $toastContent = $('<span>Your order has been submitted</span>');
-                            Materialize.toast($toastContent, 5000);
-                            $('.modal').modal('close');
-                            $scope.orderForm = {};
-                            $scope.myForm.$setPristine();
-                            $scope.myForm.$setUntouched();
-                        }
+                        var $toastContent = $('<span>Your request has been submitted</span>');
+                        Materialize.toast($toastContent, 5000);
+                        $scope.requestForm = {};
+                        $scope.myForm.$setPristine();
+                        $scope.myForm.$setUntouched();
                     }).catch(function (data, status, headers, config) {
                     // console.log('Something is wrong!', data);
-                    var $toastContent = $('<span style="color: red">Your order could not be submitted! Please try again later.</span>');
+                    var $toastContent = $('<span style="color: red">Your request could not be submitted! Please try again later.</span>');
                     Materialize.toast($toastContent, 5000);
                 });
             }

@@ -1,9 +1,7 @@
-org\camunda\bpm\getstarted\pinkblob\PrepareContractForTermination.class
-org\camunda\bpm\getstarted\pinkblob\PinkblobApplication.class
-org\camunda\bpm\getstarted\pinkblob\SendApproval.class
-org\camunda\bpm\getstarted\pinkblob\IdentifyArtifactType.class
-org\camunda\bpm\getstarted\pinkblob\SendBill.class
-org\camunda\bpm\getstarted\pinkblob\SendToDesign.class
-org\camunda\bpm\getstarted\pinkblob\ProcessRequestDelegate.class
-org\camunda\bpm\getstarted\pinkblob\ApproveReceivable.class
-org\camunda\bpm\getstarted\pinkblob\SendArtwork.class
+org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet.class
+org/camunda/bpm/pinkblob/Delegate2.class
+org/camunda/bpm/pinkblob/PinkBlobApplication.class
+org/camunda/bpm/pinkblob/Delegate1.class
+org/camunda/bpm/pinkblob/Delegate3.class
+org/camunda/bpm/pinkblob/servlet/CreateProcessServlet.class
+org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet2.class

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/WFCamunda9.iml" filepath="$PROJECT_DIR$/.idea/WFCamunda9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pink_blob.iml" filepath="$PROJECT_DIR$/pink_blob.iml" />
     </modules>
   </component>
 </project>

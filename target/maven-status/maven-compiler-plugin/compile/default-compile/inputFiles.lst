@@ -1,9 +1,14 @@
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\SendApproval.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\ProcessRequestDelegate.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\PrepareContractForTermination.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\SendToDesign.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\IdentifyArtifactType.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\SendArtwork.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\SendBill.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\PinkblobApplication.java
-C:\Users\hbhat\OneDrive\WWU Münster\Semesters Work\Summer 2017\Workflow Management\Case Study\WFCamunda9\src\main\java\org\camunda\bpm\getstarted\pinkblob\ApproveReceivable.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/Delegate1.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet6.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/Delegate3.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet3.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/Delegate5.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet5.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet2.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/Delegate2.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/Delegate6.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/servlet/CreateProcessServlet.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/PinkBlobApplication.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/Delegate4.java
+/Users/privat/Development/eclipse/workspace/pink_blob/src/main/java/org/camunda/bpm/pinkblob/servlet/ContinueProcessServlet4.java

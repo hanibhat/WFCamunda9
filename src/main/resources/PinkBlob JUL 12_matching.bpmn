@@ -598,7 +598,7 @@
         <outgoing>sid-21DA010D-FCE6-4690-BC91-22D645FDB5AE</outgoing>
         <outgoing>sid-B7FC452D-704D-4546-B81E-5C71DBAC957E</outgoing>
       </exclusiveGateway>
-      <serviceTask id="sid-4CD9BEF4-3CB0-4CA1-B795-8D785CCBD059" name="Identify Artifact type " implementation="##WebService" camunda:expression="test">
+      <serviceTask id="sid-4CD9BEF4-3CB0-4CA1-B795-8D785CCBD059" name="Identify Artifact type " implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.IdentifyArtifactTypeDelegate">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -659,7 +659,7 @@
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
-        <conditionExpression xsi:type="tFormalExpression">${hardCopyRequired==false}</conditionExpression>
+        <conditionExpression xsi:type="tFormalExpression">${hardcopyRequired==false}</conditionExpression>
       </sequenceFlow>
       <sequenceFlow id="sid-23EE11C7-3ADF-4D62-8BDD-5C168032028C" name="" sourceRef="Task_0cetbj3" targetRef="sid-4CD9BEF4-3CB0-4CA1-B795-8D785CCBD059">
         <extensionElements>
@@ -670,7 +670,7 @@
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
-        <conditionExpression xsi:type="tFormalExpression">${hadrCopyRequired==true}</conditionExpression>
+        <conditionExpression xsi:type="tFormalExpression">${hardcopyRequired==true}</conditionExpression>
       </sequenceFlow>
       <sequenceFlow id="sid-11966CA0-36DB-4CBE-AC3A-D91E84F9F623" name="" sourceRef="sid-4CD9BEF4-3CB0-4CA1-B795-8D785CCBD059" targetRef="sid-3A50165C-FD82-4986-8ED6-2D12AFEB38F1">
         <extensionElements>

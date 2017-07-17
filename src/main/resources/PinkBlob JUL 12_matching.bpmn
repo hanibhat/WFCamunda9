@@ -5,14 +5,14 @@
     <extensionElements>
       <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="2c0320dce5164294af5a0986c7349d58" />
     </extensionElements>
-    <participant id="sid-62FA6CB5-3E8D-458A-8822-7BBD36C566C6" name="PinkBlop" processRef="sid-FC9FED51-183D-4368-9CE4-886D4833BA26">
+    <participant id="sid-62FA6CB5-3E8D-458A-8822-7BBD36C566C6" name="PinkBlob" processRef="sid-FC9FED51-183D-4368-9CE4-886D4833BA26">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
     </participant>
   </collaboration>
-  <process id="sid-FC9FED51-183D-4368-9CE4-886D4833BA26" name="PinkBlop" processType="None" isClosed="false" isExecutable="true">
+  <process id="sid-FC9FED51-183D-4368-9CE4-886D4833BA26" name="PinkBlob" processType="None" isClosed="false" isExecutable="true">
     <extensionElements />
     <laneSet id="sid-8dc9f0f5-4bbd-4b5a-8339-e52c607aaab3">
       <lane id="sid-07AED8C4-9DED-49D8-ADA2-9599FF5E9C2C" name="Finance">
@@ -681,13 +681,13 @@
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
-        <conditionExpression xsi:type="tFormalExpression">false</conditionExpression>
+        <conditionExpression xsi:type="tFormalExpression">${modificationsRequired==false}</conditionExpression>
       </sequenceFlow>
       <sequenceFlow id="SequenceFlow_0mvwcf1" name="Modification Req." sourceRef="ExclusiveGateway_0m3p9h0" targetRef="Task_0pqu3vz">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
-        <conditionExpression xsi:type="tFormalExpression">true</conditionExpression>
+        <conditionExpression xsi:type="tFormalExpression">${modificationsRequired==true}</conditionExpression>
       </sequenceFlow>
     </subProcess>
   </process>

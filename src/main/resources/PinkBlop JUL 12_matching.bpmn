@@ -50,7 +50,7 @@
         <flowNodeRef>sid-6083572A-B8FC-4815-9F25-D0E109A93683</flowNodeRef>
       </lane>
     </laneSet>
-    <userTask id="Task_0eyez2l" name=" Prepare bill" implementation="##WebService">
+    <userTask id="Task_0eyez2l" name=" Prepare bill" implementation="##WebService" camunda:formKey="embedded:app:forms/form6.html">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -158,7 +158,7 @@
       <outgoing>SequenceFlow_1gr4qmd</outgoing>
       <messageEventDefinition id="sid-72f03311-eda0-48fc-8677-531121aeed10" messageRef="Message_0eqnkcd" />
     </startEvent>
-    <userTask id="Task_1wk6wjw" name="Setup contract for customer (ISS)" implementation="##WebService" camunda:formKey="embedded:app:forms/form8.html">
+    <userTask id="Task_1wk6wjw" name="Setup contract for customer" implementation="##WebService" camunda:formKey="embedded:app:forms/form8.html">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -505,7 +505,7 @@
         <incoming>sid-21DA010D-FCE6-4690-BC91-22D645FDB5AE</incoming>
         <outgoing>sid-638231C5-50D1-4F9D-8901-A6C5445782C0</outgoing>
       </exclusiveGateway>
-      <userTask id="Task_0672hmw" name="Implement artwork" implementation="##WebService">
+      <userTask id="Task_0672hmw" name="Implement artwork" implementation="##WebService" camunda:formKey="embedded:app:forms/form4.html">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -551,7 +551,7 @@
         <outgoing>SequenceFlow_10lfgxg</outgoing>
         <outgoing>SequenceFlow_0mvwcf1</outgoing>
       </exclusiveGateway>
-      <userTask id="Task_0pqu3vz" name="Modificate artwork" implementation="##WebService">
+      <userTask id="Task_0pqu3vz" name="Modificate artwork" implementation="##WebService" camunda:formKey="embedded:app:forms/form5.html">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -1060,7 +1060,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-638231C5-50D1-4F9D-8901-A6C5445782C0_gui" bpmnElement="sid-638231C5-50D1-4F9D-8901-A6C5445782C0">
         <omgdi:waypoint xsi:type="omgdc:Point" x="3919.445500158023" y="632.7596353593711" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="3943.4747390416746" y="632.5507916535449" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="3943.474739041674" y="632.5507916535449" />
         <bpmndi:BPMNLabel>
           <omgdc:Bounds x="3886" y="608" width="90" height="20" />
         </bpmndi:BPMNLabel>

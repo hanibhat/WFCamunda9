@@ -158,7 +158,7 @@
       <outgoing>SequenceFlow_1gr4qmd</outgoing>
       <messageEventDefinition id="sid-72f03311-eda0-48fc-8677-531121aeed10" messageRef="Message_0eqnkcd" />
     </startEvent>
-    <userTask id="Task_1wk6wjw" name="Setup contract for customer (ISS)" implementation="##WebService">
+    <userTask id="Task_1wk6wjw" name="Setup contract for customer (ISS)" implementation="##WebService" camunda:formKey="embedded:app:forms/form8.html">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -311,7 +311,7 @@
         <incoming>SequenceFlow_0icgodg</incoming>
         <outgoing>SequenceFlow_0f0ec14</outgoing>
       </sendTask>
-      <userTask id="Task_122lwem" name="Analzye add. information and confirm/decline impl." implementation="##WebService" camunda:formKey="embedded:app:forms/form3.html">
+      <userTask id="Task_122lwem" name="Analzye add. information and confirm/decline impl." implementation="##WebService" camunda:formKey="embedded:app:forms/form3_2.html">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#FFFFCC" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -325,7 +325,7 @@
           <targetRef>DataStoreReference_1ekoghi</targetRef>
         </dataOutputAssociation>
       </userTask>
-      <userTask id="Task_1bna943" name="Confirm/decline Implementation" implementation="##WebService" camunda:formKey="embedded:app:forms/form3_1.html">
+      <userTask id="Task_1bna943" name="Confirm/decline Implementation" implementation="##WebService" camunda:formKey="embedded:app:forms/form3_2.html">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -365,7 +365,6 @@
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
-        <conditionExpression xsi:type="tFormalExpression">true</conditionExpression>
       </sequenceFlow>
       <sequenceFlow id="SequenceFlow_0av5gns" name="" sourceRef="Task_1uzoi12" targetRef="Task_122lwem">
         <extensionElements>
@@ -376,7 +375,6 @@
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
-        <conditionExpression xsi:type="tFormalExpression">true</conditionExpression>
       </sequenceFlow>
       <sequenceFlow id="SequenceFlow_08rb5vz" sourceRef="ExclusiveGateway_0l170vq" targetRef="Task_1uzoi12">
         <extensionElements>
@@ -390,13 +388,13 @@
         </extensionElements>
         <conditionExpression xsi:type="tFormalExpression">${!informationRequired}</conditionExpression>
       </sequenceFlow>
-      <sequenceFlow id="SequenceFlow_1096j30" name="Decline" sourceRef="ExclusiveGateway_0fynnzj" targetRef="EndEvent_1km1joy">
+      <sequenceFlow id="SequenceFlow_1096j30" sourceRef="ExclusiveGateway_0fynnzj" targetRef="EndEvent_1km1joy">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
         <conditionExpression xsi:type="tFormalExpression">${!implementationAccepted}</conditionExpression>
       </sequenceFlow>
-      <sequenceFlow id="extraedge" name="Accept" sourceRef="ExclusiveGateway_0fynnzj" targetRef="sid-A0D18F98-3708-4801-A630-309F651AC491">
+      <sequenceFlow id="extraedge" sourceRef="ExclusiveGateway_0fynnzj" targetRef="sid-A0D18F98-3708-4801-A630-309F651AC491">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
@@ -1145,7 +1143,7 @@
         <omgdi:waypoint xsi:type="omgdc:Point" x="1783.960048695078" y="592" />
         <omgdi:waypoint xsi:type="omgdc:Point" x="1848.4600486950776" y="592" />
         <bpmndi:BPMNLabel labelStyle="sid-48292c64-a0a6-46b2-bea6-aff850bdf6d6">
-          <omgdc:Bounds x="1752" y="582" width="36" height="12" />
+          <omgdc:Bounds x="1752" y="582" width="37" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-D8F7BF60-F3FD-451B-AC8C-04D7DF99277F_gui" bpmnElement="extraedge">
@@ -1153,7 +1151,7 @@
         <omgdi:waypoint xsi:type="omgdc:Point" x="1783.9600486950776" y="727.2937021684334" />
         <omgdi:waypoint xsi:type="omgdc:Point" x="1848.4600486950776" y="727.2937021684334" />
         <bpmndi:BPMNLabel labelStyle="sid-48292c64-a0a6-46b2-bea6-aff850bdf6d6">
-          <omgdc:Bounds x="1753" y="676" width="34" height="12" />
+          <omgdc:Bounds x="1753" y="676" width="34" height="13" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-21DA010D-FCE6-4690-BC91-22D645FDB5AE_gui" bpmnElement="sid-21DA010D-FCE6-4690-BC91-22D645FDB5AE">

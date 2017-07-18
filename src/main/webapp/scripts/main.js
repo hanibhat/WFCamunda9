@@ -11,15 +11,15 @@ var myMod = angular.module('myApp', [])
             address: "",
             phone: "",
             hardcopyRequired: false,
-            otime: new Date().toString()
         };
         $scope.requestForm = requestForm;
 
         $scope.submit = function (valid) {
             if (valid) {
-                // console.log($scope.form);
+                console.log('request is valid!!!');
                 $http.post('/submit', $scope.requestForm)
                     .then(function (data, status, headers, config) {
+                        console.log('request submitted!!!');
                         var $toastContent = $('<span>Your request has been submitted</span>');
                         Materialize.toast($toastContent, 5000);
                         $scope.requestForm = {};
@@ -32,7 +32,7 @@ var myMod = angular.module('myApp', [])
                 });
             }
             else {
-
+                console.log('request not valid!!!');
             }
         };
     });

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <title> Welcome to PinkBlob </title>
+
+        <!-- Scripts -->
+        <!-- TODO: switch to minified versions on production -->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
+        <script src="scripts/angular.js"></script>
+        <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+        <script src="scripts/jquery.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>-->
+        <script src="scripts/materialize.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- Stylesheets -->
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">-->
+        <link rel="stylesheet" href="stylesheets/materialize.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+    </head>
+    <body ng-controller="myCont">
+    <div class="container white">
+        <form class="container main" name="myForm" ng-submit="submit(myForm.$valid)">
+            <div class="input-field">
+                <input id="name" type="text" class="validate" name="name" ng-model="requestForm.name"
+                       ng-required="true">
+                <label for="name"> Name </label>
+            </div>
+            <div class="input-field">
+                <input id="org" type="text" class="validate" name="company" ng-model="requestForm.company" required>
+                <label for="org"> Company </label>
+            </div>
+            <div class="input-field">
+                <input type="text" class="validate" id="address" name="address" ng-model="requestForm.address"
+                       required>
+                <label for="address"> Address </label>
+            </div>
+            <div class="input-field">
+                <input id="email" type="email" name="emailAdd" class="validate" ng-model="requestForm.emailAdd" required>
+                <label for="email"> Contact Email </label>
+            </div>
+            <div class="input-field">
+                <label for="phone"> Phone </label>
+                <input type="number" class="validate" id="phone" name="phone" ng-model="requestForm.phone" minlength="6"
+                       required>
+            </div>
+            <div class="input-field">
+                <textarea placeholder="Please include all details of your design..." id="spec" name="spec" type="text"
+                          ng-model="requestForm.classifiedRequirements" class="validate materialize-textarea"
+                          required></textarea>
+                <label for="spec"> Design Specification (Please enter the link to your requirements) </label>
+            </div>
+            <div class="input-field">
+                <input type="checkbox" id="hardcopyRequired" class="validate" name="hardcopy"
+                       ng-model="requestForm.hardcopyRequired">
+                <label for="hardcopyRequired"> Hardcopy required for final delivery </label>
+            </div>
+            <br>
+            <br>
+            <button class="btn"> Submit </button>
+            <button class="btn" type="reset"> Reset </button>
+        </form>
+    </div>
+    </body>
+</html>
+
+
+<!--
+<form name="requestArtwork">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control"
+               cam-variable-type="String"
+               cam-variable-name="name"
+               name="name" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control"
+               cam-variable-type="String"
+               cam-variable-name="email"
+               name="email" />
+    </div>
+    <div class="form-group">
+        <label for="organization">Organization</label>
+        <input class="form-control"
+               cam-variable-type="String"
+               cam-variable-name="organization"
+               name="organization" />
+    </div>
+    <div class="form-group">
+        <label for="designSpecification">Design Specification</label>
+        <input class="form-control"
+               cam-variable-type="String"
+               cam-variable-name="designSpecification"
+               name="designSpecification" />
+    </div>
+</form>
+-->
+

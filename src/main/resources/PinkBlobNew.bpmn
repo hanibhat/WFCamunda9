@@ -33,13 +33,13 @@
         <flowNodeRef>ExclusiveGateway_1cw0yna</flowNodeRef>
         <flowNodeRef>EndEvent_0sceoyb</flowNodeRef>
         <flowNodeRef>Task_01nm1x5</flowNodeRef>
-        <flowNodeRef>Task_1oiivla</flowNodeRef>
         <flowNodeRef>EndEvent_1jbxii3</flowNodeRef>
         <flowNodeRef>StartEvent_1</flowNodeRef>
         <flowNodeRef>Task_1wk6wjw</flowNodeRef>
         <flowNodeRef>Task_1nlms5c</flowNodeRef>
         <flowNodeRef>Task_1730w4x</flowNodeRef>
         <flowNodeRef>Task_0j3i1g6</flowNodeRef>
+        <flowNodeRef>Task_1oiivla</flowNodeRef>
       </lane>
       <lane id="Task_0wt39hq1234658" name="Design">
         <extensionElements>
@@ -64,7 +64,7 @@
         <targetRef>DataStoreReference_05b0nr1</targetRef>
       </dataOutputAssociation>
     </userTask>
-    <sendTask id="Task_1t6jbw2" name="Send Bill" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.Delegate5">
+    <sendTask id="Task_1t6jbw2" name="Send Bill" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.SendBill">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -118,7 +118,7 @@
       <incoming>SequenceFlow_1mp05hy</incoming>
       <errorEventDefinition id="sid-47100184-b98e-4fac-a3a5-6c18d3492cf8" errorRef="Error_17p75yf" />
     </endEvent>
-    <sendTask id="Task_01nm1x5" name="Send Contract Response" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.Delegate1">
+    <sendTask id="Task_01nm1x5" name="Send Contract Response" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.SendContractResponse">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -129,17 +129,6 @@
       <incoming>SequenceFlow_1shmnd6</incoming>
       <outgoing>SequenceFlow_0a23yti</outgoing>
     </sendTask>
-    <userTask id="Task_1oiivla" name="Close project" implementation="##WebService">
-      <extensionElements>
-        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
-        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
-        <signavio:signavioMetaData metaKey="risklevel" metaValue="" />
-        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="" />
-        <signavio:signavioMetaData metaKey="meta-fimtestattribut" metaValue="OK" />
-      </extensionElements>
-      <incoming>SequenceFlow_0wenyls</incoming>
-      <outgoing>SequenceFlow_11fm1do</outgoing>
-    </userTask>
     <endEvent id="EndEvent_1jbxii3" name="">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
@@ -172,7 +161,7 @@
         <targetRef>DataStoreReference_0f3j61w</targetRef>
       </dataOutputAssociation>
     </userTask>
-    <sendTask id="Task_1nlms5c" name="Send final contract to customer (ISS)" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.Delegate6">
+    <sendTask id="Task_1nlms5c" name="Send final contract to customer (ISS)" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.SendFinalContract">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -263,7 +252,7 @@
         <incoming>SequenceFlow_094pzea</incoming>
         <outgoing>SequenceFlow_1oi1t0b</outgoing>
       </exclusiveGateway>
-      <sendTask id="Task_0s3x8sl" name="Send Implementation Decision" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.Delegate3">
+      <sendTask id="Task_0s3x8sl" name="Send Implementation Decision" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.SendImplementationDecision">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -300,7 +289,7 @@
         </extensionElements>
         <incoming>extraedge</incoming>
       </endEvent>
-      <sendTask id="Task_1dwy3s1" name="Ask for additional Information" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.Delegate2">
+      <sendTask id="Task_1dwy3s1" name="Ask for additional Information" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.AskAdditionalInformation">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -519,7 +508,7 @@
           <targetRef>DataStoreReference_1ekoghi</targetRef>
         </dataOutputAssociation>
       </userTask>
-      <sendTask id="Task_0npghb5" name="Send artwork" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.Delegate4">
+      <sendTask id="Task_0npghb5" name="Send artwork" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.SendArtwork">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
@@ -680,6 +669,10 @@
         <outgoing>sid-11966CA0-36DB-4CBE-AC3A-D91E84F9F623</outgoing>
       </businessRuleTask>
     </subProcess>
+    <serviceTask id="Task_1oiivla" name="Close project" implementation="##WebService" camunda:class="org.camunda.bpm.pinkblob.CloseProject">
+      <incoming>SequenceFlow_0wenyls</incoming>
+      <outgoing>SequenceFlow_11fm1do</outgoing>
+    </serviceTask>
   </process>
   <message id="Message_12ghz66" name="Message_1k3gmvv" />
   <message id="Message_1mfpzr5" name="Message_14mp2k3" />
@@ -753,12 +746,6 @@
         <omgdc:Bounds x="389.82500553353157" y="312.2273810060916" width="100" height="80" />
         <bpmndi:BPMNLabel labelStyle="sid-9dd61b49-5370-46e7-9f1e-7dbe58eafe15">
           <omgdc:Bounds x="400.4821481726917" y="344.2273810060916" width="78.68571472167969" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="sid-9BF7B7A7-FA8A-40D1-B6D0-F356BFDE210E_gui" bpmnElement="Task_1oiivla">
-        <omgdc:Bounds x="4374.8387403335255" y="330.65270135684864" width="100" height="80" />
-        <bpmndi:BPMNLabel labelStyle="sid-9dd61b49-5370-46e7-9f1e-7dbe58eafe15">
-          <omgdc:Bounds x="4389.353026374785" y="362.65270135684864" width="70.97142791748047" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="sid-A02844EC-3628-4065-9F8E-3F6A46442A96_gui" bpmnElement="EndEvent_1jbxii3">
@@ -1067,12 +1054,18 @@
         <omgdi:waypoint xsi:type="omgdc:Point" x="4374.8387403335255" y="870.934702980018" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-5D2450C9-E002-4F66-BCA1-8AC47610670A_gui" bpmnElement="SequenceFlow_0wenyls">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="4424.8387403335255" y="830.934702980018" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="4424.8387403335255" y="410.65270135684864" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="4425" y="831" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="4425" y="411" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="4395" y="611" width="90" height="20" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-A7EB3D6B-152F-494C-B713-587C0BE304C0_gui" bpmnElement="SequenceFlow_11fm1do">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="4474.8387403335255" y="370.65270135684864" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="4546.030211016344" y="370.65270135684864" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="4475" y="371" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="4547" y="371" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="4466" y="346" width="90" height="20" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-E7DCDA1F-EA04-4AD0-A61E-CF8F8C1C7095_gui" bpmnElement="SequenceFlow_1gr4qmd">
         <omgdi:waypoint xsi:type="omgdc:Point" x="199.82500553353157" y="352.2273810060916" />
@@ -1253,6 +1246,9 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="BusinessRuleTask_0gteqb5_di" bpmnElement="sid-4CD9BEF4-3CB0-4CA1-B795-8D785CCBD059">
         <omgdc:Bounds x="3452" y="532" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0hrx4ei_di" bpmnElement="Task_1oiivla">
+        <omgdc:Bounds x="4375" y="331" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
     <bpmndi:BPMNLabelStyle id="sid-48292c64-a0a6-46b2-bea6-aff850bdf6d6">

@@ -10,28 +10,28 @@ import org.apache.http.impl.client.HttpClients;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 
-public class Delegate1 implements JavaDelegate {
+public class SendImplementationDecision implements JavaDelegate {
 
 	public void execute(DelegateExecution execution) throws Exception { // build
-																		// HTTP
-																		// request
-																		// with
-																		// all
-																		// variables
-																		// as
-																		// parameters
+		// HTTP
+		// request
+		// with
+		// all
+		// variables
+		// as
+		// parameters
 		HttpClient client = HttpClients.createDefault();
-		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://localhost:8080/iss-process/receiveContractConditions")
+		RequestBuilder requestBuilder = RequestBuilder.get()
+				.setUri("http://localhost:8080/iss-process/implementationResponse")
 				.addParameter("corrID", String.valueOf(execution.getVariable("corrID")))
-				.addParameter("contractNegotiated", String.valueOf(execution.getVariable("approved")));
-				
+				.addParameter("implementationAccepted", String.valueOf(execution.getVariable("implementationAccepted")));
 				
 		
 		// execute request
 		HttpUriRequest request = requestBuilder.build();
 		HttpResponse response = client.execute(request); // log debug
-															// information
-			System.out.println(request.getURI());
-			System.out.println(response.getStatusLine());
+		// information
+	System.out.println(request.getURI());
+	System.out.println(response.getStatusLine());
 	}
 }

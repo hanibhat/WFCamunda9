@@ -1,9 +1,17 @@
 body {
-    /*background-color: #ffcdd2;*/
-    background-image: url("../assets/tulips-2148651_1920.jpg");
+    background-color: #ffcdd2;
+    /*background-image: url("../assets/tulips-2148651_1920.jpg");*/
 }
 
 .container.main {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.submitted {
+    margin-top: 50px;
+}
+
+.myform {
+    margin-bottom: 150px;
 }

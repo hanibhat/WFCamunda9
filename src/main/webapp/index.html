@@ -1,82 +1,84 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
-<head>
-    <meta charset="UTF-8">
-    <title> Welcome to PinkBlob </title>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Welcome to PinkBlob </title>
 
-    <!-- Scripts -->
-    <!-- TODO: switch to minified versions on production -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
-    <script src="scripts/angular.js"></script>
-    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
-    <script src="scripts/jquery.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>-->
-    <script src="scripts/materialize.js"></script>
-    <script src="scripts/main.js"></script>
-    <!-- Stylesheets -->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">-->
-    <link rel="stylesheet" href="stylesheets/materialize.css">
-    <link rel="stylesheet" href="stylesheets/main.css">
-</head>
-<body ng-controller="myCont">
-<nav>
-    <div class="nav-wrapper pink lighten-2">
-        <a href="#" class="brand-logo">
-            PinkBlob
-        </a>
-        <ul id="nav-mobile" class="right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQs</a></li>
-        </ul>
-    </div>
-</nav>
-<!--<div class="parallax-container">
-    <div class="parallax"><img src="assets/tulips-2148651_1920.jpg"></div>
-</div>-->
-<div class="container">
-    <form class="container main" name="myForm" method="POST" action="createRequest.do">
-        <div class="input-field">
-            <input id="corrID" class="validate" name="corrID" required>
-            <label for="corrID"> corrID </label>
+        <!-- Scripts -->
+        <!-- TODO: switch to minified versions on production -->
+        <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+        <script src="scripts/jquery.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>-->
+        <script src="scripts/materialize.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- Stylesheets -->
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">-->
+        <link rel="stylesheet" href="stylesheets/materialize.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper pink lighten-2">
+                <a href="#" class="brand-logo">
+                    PinkBlob
+                </a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="parallax-container">
+            <div class="parallax"><img src="assets/tulips-2148651_1920.jpg"></div>
         </div>
-        <div class="input-field">
-            <input id="name" class="validate" name="name" required>
-            <label for="name"> Name </label>
+        <div class="container myform">
+            <h3 class="center pink-text"> Request your design now! </h3>
+            <form class="container main" name="myForm" method="POST" action="createRequest.do">
+                <div class="input-field">
+                    <input id="corrID" type="text" class="validate" name="corrID" required>
+                    <label for="corrID"> corrID </label>
+                </div>
+                <div class="input-field">
+                    <input id="name" type="text" class="validate" name="name" required>
+                    <label for="name"> Name </label>
+                </div>
+                <div class="input-field">
+                    <input id="org" type="text" class="validate" name="company" required>
+                    <label for="org"> Company </label>
+                </div>
+                <div class="input-field">
+                    <input class="validate" type="text" id="address" name="address" required>
+                    <label for="address"> Address </label>
+                </div>
+                <div class="input-field">
+                    <input id="email" type="email" name="emailAdd" class="validate" required>
+                    <label for="email"> Contact Email </label>
+                </div>
+                <div class="input-field">
+                    <label for="phone"> Phone </label>
+                    <input type="number" class="validate" id="phone" name="phone" minlength="6" required>
+                </div>
+                <div class="input-field">
+                        <textarea id="classifiedRequirements" name="classifiedRequirements" type="text"
+                                  class="validate materialize-textarea" required></textarea>
+                    <label for="classifiedRequirements"> Design Specification (Please enter the link to your requirements) </label>
+                </div>
+                <div class="input-field">
+                    <input type="checkbox" id="hardcopyRequired" class="validate" value="true"
+                           name="hardcopyRequired">
+                    <label for="hardcopyRequired"> Hardcopy required for final delivery </label>
+                </div>
+                <br>
+                <br>
+                <input type="submit" value="create" class="btn pink lighten-2">
+                <button class="btn pink lighten-2" type="reset"> Reset </button>
+            </form>
         </div>
-        <div class="input-field">
-            <input id="org" class="validate" name="company" required>
-            <label for="org"> Company </label>
+        <div class="parallax-container">
+            <div class="parallax"><img src="assets/tulips-2148651_1920.jpg"></div>
         </div>
-        <div class="input-field">
-            <input class="validate" id="address" name="address" required>
-            <label for="address"> Address </label>
-        </div>
-        <div class="input-field">
-            <input id="email" type="email" name="emailAdd" class="validate" required>
-            <label for="email"> Contact Email </label>
-        </div>
-        <div class="input-field">
-            <label for="phone"> Phone </label>
-            <input type="number" class="validate" id="phone" name="phone" minlength="6" required>
-        </div>
-        <div class="input-field">
-                <textarea id="classifiedRequirements" name="classifiedRequirements" type="text"
-                          class="validate materialize-textarea" required></textarea>
-            <label for="classifiedRequirements"> Design Specification (Please enter the link to your requirements) </label>
-        </div>
-        <div class="input-field">
-            <input type="checkbox" id="hardcopyRequired" class="validate" name="hardcopyRequired"
-                 value="required">
-            <label for="hardcopyRequired"> Hardcopy required for final delivery </label>
-        </div>
-        <br>
-        <br>
-        <input type="submit" value="create" class="btn pink lighten-2">
-        <button class="btn pink lighten-2" type="reset"> Reset </button>
-    </form>
-</div>
-</body>
+    </body>
 </html>
 
 

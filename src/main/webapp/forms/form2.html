@@ -20,13 +20,14 @@
 	  <input type="checkbox"
        		cam-variable-name="hardcopyRequired"
        		cam-variable-type="Boolean" disabled/>
-      <label for="hardcopyRequired">Hardcopy required for final delivery</label>
+      <label for="hardcopyRequired"> Require hardcopy </label>
    </div> 
   
   <div class="form-group">
 	  <input type="checkbox"
        		cam-variable-name="informationRequired"
-       		cam-variable-type="Boolean" />
+       		cam-variable-type="Boolean"
+            id="informationRequired"/>
       <label for="informationRequired">Do you need more information from ISS to continue with the project?</label>
    </div> 
   <!-- TODO: disabled condition -->
@@ -35,6 +36,7 @@
     <input class="form-control"
            cam-variable-type="String"
            cam-variable-name="requiredInformation"
+           id="requiredInformation"
            name="requiredInformation"/>
   </div>
 

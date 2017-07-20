@@ -11,6 +11,14 @@
 		<url-pattern>/create-process</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<servlet-name>CreateRequest</servlet-name>
+		<servlet-class>org.camunda.bpm.pinkblob.servlet.CreateRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+  		<servlet-name>CreateRequest</servlet-name>
+  		<url-pattern>/createRequest.do</url-pattern>
+ 	</servlet-mapping>
+	<servlet>
 		<servlet-name>ContinueProcess</servlet-name>
 		<servlet-class>org.camunda.bpm.pinkblob.servlet.ContinueProcessServlet</servlet-class>
 	</servlet>

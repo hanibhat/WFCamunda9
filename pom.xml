@@ -19,7 +19,6 @@
 	</dependencyManagement>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -79,7 +78,6 @@
 			<artifactId>spring-web</artifactId>
 			<version>4.3.9.RELEASE</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>

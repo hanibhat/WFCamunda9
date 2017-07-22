@@ -46,7 +46,7 @@ public class CreateRequestServlet extends HttpServlet {
 
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         RuntimeService runtimeService = processEngine.getRuntimeService();
-        PrintWriter out = response.getWriter();
+//        PrintWriter out = response.getWriter();
         ProcessInstance processInstance;
         if (null == corrID) {
             processInstance = runtimeService.startProcessInstanceByMessage("InstantiationMessage2");

@@ -1,6 +1,7 @@
 body {
-    background-color: #ffcdd2;
-    /*background-image: url("../assets/tulips-2148651_1920.jpg");*/
+    background: linear-gradient(#fce4ec, #c2c2c2, #fce4ec);/* Standard syntax */
+    font-family: 'Droid Serif', serif;
+    font-size: 110%;
 }
 
 .container.main {
@@ -10,8 +11,85 @@ body {
 
 .submitted {
     margin-top: 50px;
+    font-size: 150%;
 }
 
 .myform {
     margin-bottom: 150px;
+}
+
+.employees, .myform {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.employee {
+    margin: 20px 20px 20px 20px;
+}
+
+.emp-img {
+    max-height: 200px !important;
+    max-width: 180px !important;
+}
+
+nav ul a, .page-footer {
+    color: #f06292;
+    font-weight: 600;
+}
+
+nav ul a:hover {
+    background-color: #fce4ec;
+}
+/*
+.bg,
+.overlay {
+    text-align: center;
+}
+
+.parallax-container {
+    !*width: 100%;*!
+    margin-bottom: -4px;
+}
+
+h2 {
+    font-family: 'Droid Serif', serif;
+}
+p {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.parallax-container:hover {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}*/
+
+.parallax-container {
+    height: 700px;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    text-transform: none !important;
+}
+
+.slider h2 {
+    font-weight: 600;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    border-bottom: 1px solid #f06292;
+}
+
+[type="checkbox"] + label::before, [type="checkbox"]:not(.filled-in) + label::after {
+    border-color: #f06292;
+}
+.input-field label {
+    color: #f06292;
+}
+
+.card .card-action:last-child:hover {
+    background-color: #fce4ec;
+}
+
+.card .card-content:hover {
+    background-color: #fce4ec;
 }

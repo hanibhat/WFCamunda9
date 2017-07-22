@@ -540,7 +540,7 @@
         <outgoing>SequenceFlow_10lfgxg</outgoing>
         <outgoing>SequenceFlow_0mvwcf1</outgoing>
       </exclusiveGateway>
-      <userTask id="Task_0pqu3vz" name="Modificate artwork" implementation="##WebService" camunda:formKey="embedded:app:forms/form5.html">
+      <userTask id="Task_0pqu3vz" name="Modify artwork" implementation="##WebService" camunda:formKey="embedded:app:forms/form5.html">
         <extensionElements>
           <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />

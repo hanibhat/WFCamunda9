@@ -13,7 +13,7 @@ public class SendBill implements JavaDelegate {
 	public void execute(DelegateExecution execution) throws Exception {
 		
 		HttpClient client = HttpClients.createDefault();
-		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://localhost:8080/iss-process/receiveAgencyBill")
+		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://192.168.0.1:8080/iss-process/receiveAgencyBill")
 				.addParameter("corrID", String.valueOf(execution.getVariable("corrID")))
 				.addParameter("amount", String.valueOf(execution.getVariable("amount")))
 				.addParameter("iban", String.valueOf(execution.getVariable("iban")));

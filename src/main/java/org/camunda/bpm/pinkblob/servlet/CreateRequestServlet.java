@@ -22,7 +22,7 @@ public class CreateRequestServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // read form fields
-        String corrID = request.getParameter("corrID");
+        String corrID = "78623872323";
         String name = request.getParameter("name");
         String company = request.getParameter("company");
         String address = request.getParameter("address");
@@ -30,8 +30,10 @@ public class CreateRequestServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String classifiedRequirements = request.getParameter("classifiedRequirements");
         String hardcopyRequired = request.getParameter("hardcopyRequired");
-        if (null == hardcopyRequired) {
-            hardcopyRequired = "false";
+        if ("on" == hardcopyRequired) {
+            hardcopyRequired = "true";
+        } else {
+        	hardcopyRequired = "false";
         }
 
         /*

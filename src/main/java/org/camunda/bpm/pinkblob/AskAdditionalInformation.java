@@ -20,7 +20,7 @@ public class AskAdditionalInformation implements JavaDelegate {
 		// parameters
 		HttpClient client = HttpClients.createDefault();
 		RequestBuilder requestBuilder = RequestBuilder.get()
-				.setUri("http://localhost:8080/iss-process/requestAdditionalInformation")
+				.setUri("http://192.168.0.1:8080/iss-process/requestAdditionalInformation")
 				.addParameter("corrID", String.valueOf(execution.getVariable("corrID")))
 				.addParameter("informationRequired", String.valueOf(execution.getVariable("informationRequired")))
 				.addParameter("requiredInformation",String.valueOf(execution.getVariable("requiredInformation")));

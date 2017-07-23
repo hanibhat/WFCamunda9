@@ -13,7 +13,7 @@ public class SendFinalContract implements JavaDelegate {
 	public void execute(DelegateExecution execution) throws Exception {
 		
 		HttpClient client = HttpClients.createDefault();
-		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://localhost:8080/iss-process/receiveContractFromAgency")
+		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://192.168.0.1:8080/iss-process/receiveContractFromAgency")
 				.addParameter("corrID", String.valueOf(execution.getVariable("corrID")))
 				.addParameter("linkToContract", String.valueOf(execution.getVariable("linkToContract")));
 						

@@ -21,7 +21,7 @@ public class SendArtwork implements JavaDelegate {
 																		// as
 																		// parameters
 		HttpClient client = HttpClients.createDefault();
-		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://localhost:8080/iss-process/receiveCompleteArtwork")
+		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://192.168.0.1:8080/iss-process/receiveCompleteArtwork")
 				.addParameter("corrID", String.valueOf(execution.getVariable("corrID")))
 				.addParameter("linkToArtwork", String.valueOf(execution.getVariable("linkToArtwork")));
 				

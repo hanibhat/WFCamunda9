@@ -22,7 +22,7 @@ public class SendImplementationDecision implements JavaDelegate {
 		// parameters
 		HttpClient client = HttpClients.createDefault();
 		RequestBuilder requestBuilder = RequestBuilder.get()
-				.setUri("http://localhost:8080/iss-process/implementationResponse")
+				.setUri("http://192.168.0.1:8080/iss-process/implementationResponse")
 				.addParameter("corrID", String.valueOf(execution.getVariable("corrID")))
 				.addParameter("implementationAccepted", String.valueOf(execution.getVariable("implementationAccepted")));
 				

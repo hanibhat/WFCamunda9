@@ -21,7 +21,7 @@ public class SendContractResponse implements JavaDelegate {
 																		// as
 																		// parameters
 		HttpClient client = HttpClients.createDefault();
-		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://localhost:8080/iss-process/receiveContractConditions")
+		RequestBuilder requestBuilder = RequestBuilder.get().setUri("http://192.168.0.1:8080/iss-process/receiveContractConditions")
 				.addParameter("corrID", String.valueOf(execution.getVariable("corrID")))
 				.addParameter("contractNegotiated", String.valueOf(execution.getVariable("approved")));
 				

@@ -25,8 +25,10 @@ public class CreateProcessServlet extends HttpServlet {
 		RuntimeService runtimeService = processEngine.getRuntimeService();
 		PrintWriter out = response.getWriter();
 		String corrID = request.getParameter("corrID");
+		String name = request.getParameter("name");
 		String company = request.getParameter("company");
 		String address = request.getParameter("address");
+		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
 		String classifiedRequirements = request.getParameter("classifiedRequirements");
 		String hardcopyRequired = request.getParameter("hardcopyRequired");
@@ -38,6 +40,8 @@ public class CreateProcessServlet extends HttpServlet {
 		} else {
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("corrID", corrID);
+			map.put("name", name);
+			map.put("email", email);
 			map.put("company", company);
 			map.put("address", address);
 			map.put("phone", phone);

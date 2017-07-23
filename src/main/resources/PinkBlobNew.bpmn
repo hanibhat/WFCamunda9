@@ -86,7 +86,7 @@
       <incoming>SequenceFlow_1fs7g60</incoming>
       <outgoing>SequenceFlow_0wenyls</outgoing>
     </receiveTask>
-    <userTask id="Task_19bz728" name="Check Design Requirements " implementation="##WebService" camunda:formKey="embedded:app:forms/checkDesign.html" camunda:candidateGroups="Contract">
+    <userTask id="Task_19bz728" name="Check Design Requirements " implementation="##WebService" camunda:formKey="embedded:app:forms/checkDesign.html">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,6 +20,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/createRequest")
 public class CreateRequestServlet extends HttpServlet {
+	
+    private final static Logger LOGGER = Logger.getLogger("DESIGN-REQUESTS");
+	
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // read form fields
@@ -29,11 +33,15 @@ public class CreateRequestServlet extends HttpServlet {
         String emailAdd = request.getParameter("emailAdd");
         String phone = request.getParameter("phone");
         String classifiedRequirements = request.getParameter("classifiedRequirements");
-        String hardcopyRequired = request.getParameter("hardcopyRequired");
-        if ("on" == hardcopyRequired) {
-            hardcopyRequired = "true";
+        String hardcopyRequiredString = request.getParameter("hardcopyRequired");
+        LOGGER.info("Closing project with corrID: '" + hardcopyRequiredString);
+        System.out.println(hardcopyRequiredString);
+        Boolean hardcopyRequired;
+        if (null == hardcopyRequiredString ) {
+            hardcopyRequired = false;
         } else {
-        	hardcopyRequired = "false";
+            hardcopyRequired = true;
+
         }
 
         /*
